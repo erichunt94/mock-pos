@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Water Bottle",
+        "sku": "A0001",
+        "price": 10.00,
+        "quantity": 0,
+        "image": "/assets/img/water-bottle.png",
+        "categoryId": 1
+    },
+    {
+        "name": "Gym Bag",
+        "sku": "A0002",
+        "price": 20.00,
+        "quantity": 0,
+        "image": "/assets/img/gym-bag.png",
+        "categoryId": 1
+    },
+    {
+        "name": "Sunglasses",
+        "sku": "A0003",
+        "price": 15.00,
+        "quantity": 0,
+        "image": "/assets/img/sunglasses.png",
+        "categoryId": 1
+    },
+    {
+        "name": "Hat",
+        "sku": "A0004",
+        "price": 12.00,
+        "quantity": 0,
+        "image": "/assets/img/hat.png",
+        "categoryId": 1
+    },
+    {
+        "name": "T-Shirt",
+        "sku": "C0001",
+        "price": 17.00,
+        "quantity": 0,
+        "image": "/assets/img/shirt.png",
+        "categoryId": 2
+    },
+    {
+        "name": "Shorts",
+        "sku": "C0002",
+        "price": 13.00,
+        "quantity": 0,
+        "image": "/assets/img/shorts.png",
+        "categoryId": 2
+    },
+    {
+        "name": "Socks",
+        "sku": "C0003",
+        "price": 8.00,
+        "quantity": 0,
+        "image": "/assets/img/socks.png",
+        "categoryId": 2
+    },
+    {
+        "name": "Running Shoes",
+        "sku": "F0001",
+        "price": 50.00,
+        "quantity": 0,
+        "image": "/assets/img/running-shoes.png",
+        "categoryId": 3
+    },
+    {
+        "name": "Basketball Shoes",
+        "sku": "F0002",
+        "price": 65.00,
+        "quantity": 0,
+        "image": "/assets/img/basketball-shoes.png",
+        "categoryId": 3
+    },
+    {
+        "name": "Soccer Cleats",
+        "sku": "F0003",
+        "price": 85.00,
+        "quantity": 0,
+        "image": "/assets/img/cleats.png",
+        "categoryId": 3
+    }
+]

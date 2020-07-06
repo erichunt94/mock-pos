@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-xl-12 mb-10">
+        <div class="card">
+            <div class="flex align-items-center justify-content-between">
+                <div>
+                    <h2><i class="fa fa-shopping-bag"></i>&nbsp; Store</h2>
+                    <p>Shop for products.</p>
+                </div>
+                <div>
+                    <button class="btn btn-success" routerLink="/checkout">Checkout &nbsp;<i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="xl:flex align-items-center justify-content-between">
+                <input id="search" #search class="form-control xl:w-50 w-100" placeholder="Search by product name or SKU" (keyup)="applyFilters(search.value, category.value, price)" />
+                <div class="flex align-items-center xl:pl-4 xl:w-25 w-100">
+                    <span class="mr-2 w-24 text-right">Category: </span>
+                    <select id="category" #category class="form-control w-100" (change)="applyFilters(search.value, category.value, price)">
+                        <option value="0">All</option>
+                        <option *ngFor="let category of app.categories" value="{{category.categoryId}}">{{category.name}}</option>
+                    </select>
+                </div>
+                <div class="flex align-items-center xl:w-25 w-100">
+                    <span class="mr-2 w-24 text-right">Price: </span>
+                    <select id="price" #price class="form-control w-100" (change)="applyFilters(search.value, category.value, price)">
+                        <option value="0">All</option>
+                        <option *ngFor="let price of app.prices" [attr.data-min]="price.min" [attr.data-max]="price.max">{{price.display}}</option>
+                    </select>
+                </div>
+                <button class="btn btn-light ml-4 w-25" (click)="resetFilters()"><i class="fa fa-refresh"></i>&nbsp; Reset</button>
+            </div>
+            <div class="card-content mt-3 mb-2">
+                <div class="row m-0">
+                    <ng-container *ngIf="products.length">
+                        <app-product class="col-xl-3 p-0" *ngFor="let product of products" [product]="product" [inCart]="false" [purchase]="false"></app-product>
+                    </ng-container>
+                    <ng-container *ngIf="!products.length">
+                        <div class="p-4">No results. <a href="javascript:;" (click)="resetFilters()">Reset filters.</a></div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

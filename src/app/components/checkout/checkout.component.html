@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-xl-12 mb-10">
+        <div class="card">
+            <div class="flex align-items-center justify-content-between">
+                <div>
+                    <h2><i class="fa fa-shopping-cart"></i>&nbsp; Cart</h2>
+                    <p>Products added to your shopping cart appear here.</p>
+                </div>
+                <div>
+                    <button class="btn btn-info" routerLink="/store"><i class="fa fa-arrow-left"></i>&nbsp; Back to store</button>
+                </div>
+            </div>
+            <div class="card-content mt-3 mb-2">
+                <app-cart [purchase]="false"></app-cart>
+                <div class="flex align-items-center justify-content-between p-3" *ngIf="app.cartProducts.length">
+                    <div>
+                        <div>
+                            <span class="font-bold">Subtotal: </span>{{app.orderSubtotal | currency}}
+                        </div>
+                        <div>
+                            <span class="font-bold">Tax: </span>{{app.orderTax | currency}}
+                        </div>
+                        <div>
+                            <span class="font-bold">Total: </span>{{app.orderTotal | currency}}
+                        </div>
+                    </div>
+                    <button class="btn btn-success purchase" *ngIf="app.cartProducts.length" (click)="purchase()"><i class="fa fa-credit-card"></i>&nbsp; Purchase</button>
+                    <div class="processing" *ngIf="app.cartProducts.length" style="display:none;">
+                        <i class="fa fa-refresh fa-spin fa-fw"></i>&nbsp; Processing
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

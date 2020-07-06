@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Accessories",
+        "categoryId": 1
+    },
+    {
+        "name": "Clothing",
+        "categoryId": 2
+    },
+    {
+        "name": "Footwear",
+        "categoryId": 3
+    }
+]

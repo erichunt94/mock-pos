@@ -1,0 +1,35 @@
+<!-- store product tile -->
+<div class="product flex flex-col store" *ngIf="!inCart">
+    <div class="image flex align-items-center justify-content-center p-2 w-100">
+        <img src="{{product.image}}" />
+    </div>
+    <div class="title flex flex-col justify-content-center p-2 w-100">
+        <span class="font-bold text-lg">{{product.name}} <span class="font-normal text-base">({{product.sku}})</span></span>
+        <span class="text-sm">{{product.price | currency}}</span>
+    </div>
+    <div class="controls flex align-items-center justify-content-between p-2 mb-2 w-100" *ngIf="!inCart">
+        <div class="flex align-items-center w-50">
+            <span class="flex align-items-center mr-2">QTY:</span>
+            <span class="w-50"><input #quantity class="form-control" type="number" value="1" min="1" /></span>
+        </div>
+        <div class="w-50 text-right">
+            <button class="btn btn-primary" (click)="addToCart(product, quantity.value); quantity.value = 1;"><i class="fa fa-plus"></i>&nbsp; Add to cart</button>
+        </div>
+    </div>
+</div>
+<!-- cart product tile -->
+<div class="product flex cart" *ngIf="inCart">
+    <div class="title flex flex-col justify-content-center w-25">
+        <span class="font-bold">{{product.name}} <span class="font-normal text-xs">({{product.sku}})</span></span>
+        <span class="text-xs">{{product.price | currency}}</span>
+    </div>
+    <div class="image flex align-items-center justify-content-center w-25">
+        <img src="{{product.image}}" />
+    </div>
+    <div class="controls flex justify-content-end align-items-center w-50">
+        <div class="flex align-items-center w-50">
+            <span class="flex align-items-center mr-2">QTY: {{product.quantity}}</span>
+        </div>
+        <button class="btn btn-danger" *ngIf="!purchase" (click)="removeFromCart(product)"><i class="fa fa-trash"></i>&nbsp; Remove</button>
+    </div>
+</div>

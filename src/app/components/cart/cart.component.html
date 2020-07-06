@@ -1,0 +1,12 @@
+<!-- products in cart -->
+<ng-container *ngIf="app.cartProducts.length && !purchase">
+    <app-product *ngFor="let product of app.cartProducts" [product]="product" [inCart]="true" [purchase]="false"></app-product>
+</ng-container>
+<!-- products on receipt -->
+<ng-container *ngIf="app.purchasedProducts.length && purchase">
+    <app-product *ngFor="let product of app.purchasedProducts" [product]="product" [inCart]="true" [purchase]="true"></app-product>
+</ng-container>
+<!-- empty cart message -->
+<ng-container *ngIf="!app.cartProducts.length && !purchase">
+    <div class="p-4">Your cart is empty. <a routerLink="/store">Back to store.</a></div>
+</ng-container>

@@ -1,0 +1,22 @@
+.product {
+    padding: 1em;
+    border-bottom: 2px solid #eee;
+
+    &.store {
+        border: 1px solid #eee;
+
+        .image img {
+            height: 150px;
+        }
+    }
+
+    &.cart {
+        .image img {
+            max-height: 70px;
+        }
+    }
+
+    &.last {
+        border-bottom: none;
+    }
+}

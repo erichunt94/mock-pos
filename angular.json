@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mock-pos"
+    }
+  },
+  "defaultProject": "mock-pos",
+  "cli": {
+    "analytics": "48b3fe1e-96b8-4bc4-b513-5bc6fbc6bfc3"
+  }
 }

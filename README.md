@@ -1,6 +1,13 @@
 # MockPos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+This is a mock point of sale system created by Eric Hunt. This project was built in Angular and generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+
+In addition to Angular, this project was created utilizing the following technologies:
+- [jQuery](https://jquery.com/)
+- [Bootstrap 4](https://getbootstrap.com/)
+- [Underscore.js](https://underscorejs.org/)
+- [tailwindcss](https://tailwindcss.com/)
+- [FontAwesome](https://fontawesome.com/)
 
 ## Development server
 

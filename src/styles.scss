@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.card {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background-color: #fafafa !important;
+    padding: 1.5em 2em;
+    line-height: 24px;
+    width: 100%;
+    height: 100%;
+  
+    .card-content {
+        background-color: #fff;
+        border: 2px solid #eee;
+        height: 100%;
+    }
+  }
