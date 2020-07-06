@@ -9,6 +9,10 @@ In addition to Angular, this project was created utilizing the following technol
 - [tailwindcss](https://tailwindcss.com/)
 - [FontAwesome](https://fontawesome.com/)
 
+## Getting Started
+
+Make sure to have [node.js](https://nodejs.org/) installed. Run `npm install` to install node modules.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
